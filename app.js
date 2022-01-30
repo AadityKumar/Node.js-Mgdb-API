@@ -10,7 +10,7 @@ var key="address";     //---- video-36
 var algo='aes-256-ctr';     //---- video-36
 const jwt=require('jsonwebtoken')     //------ video-37
 jwtKey="jwt";     //------ video-37
-
+const port = process.env.port || 3000;
 mongoose.connect('mongodb+srv://avenger:m86Ycrc7BSeFnCU@cluster0.igb3o.mongodb.net/tutorial?retryWrites=true&w=majority',
 {
         useNewUrlParser: true,
@@ -139,5 +139,5 @@ app.post('/login',jsonParser,function(req,res){
     
   })
 })
-app.listen(301);
+app.listen(port);
 
